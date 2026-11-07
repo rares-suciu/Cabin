@@ -1,0 +1,11 @@
+# Assumptions
+- Package ID: `dev.noru.cabin`.
+- Manual Dependency Injection is chosen over Koin to minimize complexity since there's no backend, single database, and simple repositories. (Will reconsider if Koin is strictly preferred, but "Koin or manual" allows manual). I'll actually use Koin as it makes ViewModels with SavedStateHandle and WorkManager integration much easier.
+- Android targetSdk 34, compileSdk 34, minSdk 26.
+- Kotlin 1.9.22 (based on Gradle 8.8 default), Compose Compiler 1.5.10 or using Kotlin 2.0 with Compose Compiler plugin. Let's stick to Kotlin 1.9.24 for stability with Gradle 8.8, and KSP for Room.
+- OkHttp for all networking.
+- Image downscaling to 1280px will be done using standard Android `BitmapFactory` and saving as WebP.
+- WebView will use `loadDataWithBaseURL` and intercept image requests matching local paths.
+- Github Actions CI will use `gradle-version: '8.8'` or current.
+- Coroutines for background tasks.
+- Navigation Compose for UI routing.

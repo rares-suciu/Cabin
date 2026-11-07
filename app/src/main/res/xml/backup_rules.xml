@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include all data to allow full restore across devices, this is intended for a single user personal app -->
+    <include domain="file" path="articles" />
+    <include domain="database" path="cabin.db" />
+    <include domain="sharedpref" path="." />
+</full-backup-content>
